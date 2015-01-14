@@ -36,6 +36,7 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'devise'
 # gem 'bcrypt', '~> 3.1.7'
+gem 'figaro', '1.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
