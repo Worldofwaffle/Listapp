@@ -38,6 +38,10 @@ gem 'devise'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'figaro', '1.0'
 
+gem 'bootstrap-sass', '~> 3.3.1'
+
+gem 'faker'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

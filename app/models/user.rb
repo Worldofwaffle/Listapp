@@ -3,4 +3,14 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :confirmable 
+  
+  has_one :list
+  
+  after_create :user_list
+  
+  private
+  
+  def user_list
+    List.create(user_id: id)
+  end
 end

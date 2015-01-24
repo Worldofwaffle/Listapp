@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
    
-  devise_for :users
+  
+  devise_for :users 
+  resources :lists, only: [:show]
   get 'welcome/about', as: :about
-  
+  #get 'list', to: 'lists#show', as: :user_root
   root to: 'welcome#index'
-  
+
   
 
   # The priority is based upon order of creation: first created -> highest priority.
