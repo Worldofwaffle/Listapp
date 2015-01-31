@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users 
   resources :lists, only: [:show]
   get 'welcome/about', as: :about
-  #get 'list', to: 'lists#show', as: :user_root
+  get 'list', to: 'lists#show', as: :user_root
   root to: 'welcome#index'
 
   
