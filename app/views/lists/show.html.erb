@@ -1,2 +1,24 @@
-<h1>lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<div class='new-comment'>
+      <%= render 'form' %>
+   </div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Todo Items</th>
+     </tr>
+  </thead>
+  <% @todos.each_with_index do |todo, index| %>
+    <tr>
+      <td><%= index + 1 %> </td>
+      <td><%= todo.description %></td>
+      <td><p><%= link_to [@list, todo], method: :delete do %>
+          
+        <i class="fa fa-check-square"></i>
+       <% end %>
+        </p></td>
+      <% end %>
+    </tr>
+ 
+  
+</table>
+

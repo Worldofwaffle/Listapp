@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 20150124032209) do
   add_index "lists", ["user_id"], name: "index_lists_on_user_id"
 
   create_table "todos", force: true do |t|
-    t.string  "description"
-    t.integer "list_id"
+    t.string   "description"
+    t.integer  "list_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "todos", ["list_id"], name: "index_todos_on_list_id"

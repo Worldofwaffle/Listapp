@@ -1,5 +1,11 @@
 require 'faker'
-
+admin = User.new(
+   name:     'Admin User',
+   email:    'admin@example.com',
+   password: 'helloworld'
+  )
+ admin.skip_confirmation!
+ admin.save!
 5.times do
   user = User.new(
     name:     Faker::Name.name,
@@ -22,11 +28,5 @@ lists.each do |list|
 end
 todos = Todo.all
 
-admin = User.new(
-   name:     'Admin User',
-   email:    'admin@example.com',
-   password: 'helloworld'
-  )
- admin.skip_confirmation!
- admin.save!
+
  

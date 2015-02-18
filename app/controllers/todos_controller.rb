@@ -1,5 +1,6 @@
 class TodosController < ApplicationController
   
+  
  
  
   def new
@@ -39,11 +40,14 @@ class TodosController < ApplicationController
      @todo = Todo.find(params[:id])
      @todo.destroy
      flash[:notice] = "Successfully destroyed todo."
+     redirect_to :back
    end
+ 
+     
   
   private
    def todo_params
-    params.require(:list).permit(:description, :completed)
+     params.require(:todo).permit(:description, :completed)
   end
 
 end

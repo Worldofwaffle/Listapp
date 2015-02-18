@@ -1,7 +1,7 @@
 desc "Deletes all expired Todos"
 task purge_todos: :environment do
-   Task.all.each do |task|
-    task.delete if Time.now > task.expires_at
+  Todo.all.each do |todo|
+    todo.delete if Time.now > todo.expires_at
   end
 end
   

@@ -42,6 +42,10 @@ gem 'bootstrap-sass', '~> 3.3.1'
 
 gem 'faker'
 
+gem 'whenever'
+
+gem 'font-awesome-sass'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
